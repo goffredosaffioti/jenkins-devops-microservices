@@ -15,15 +15,22 @@ pipeline {
 	agent any
 	stages {
 		stage('Build') {
+			steps {
 			echo "Build"
+			}
 		}
 		stage('Test'){
+			steps {
 			echo "Test"
 		}
+		}
 		stage('Integration Test') {
+			steps {
 			echo "Integration Test"
 		}
-		} post {
+		}
+		} 
+		post {
 			always {
 				echo "This run always nel post build"
 			}
